@@ -202,6 +202,7 @@ func repositoryDispatch(owner, repo, user, pat, eventType, sha, clientPayload, r
 		return err
 	}
 	payload["sha"] = sha
+	payload["ref"] = ref
 	rdp := &RepositoryDispatchRequest{
 		EventType:     eventType,
 		ClientPayload: payload,
